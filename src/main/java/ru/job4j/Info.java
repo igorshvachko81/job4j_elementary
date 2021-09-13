@@ -3,5 +3,6 @@ package ru.job4j;
 public class Info {
     public static void main(String[] args) {
         System.out.println(("14.09.2021"));
+        System.out.println("today 14.09.2021");
     }
 }
