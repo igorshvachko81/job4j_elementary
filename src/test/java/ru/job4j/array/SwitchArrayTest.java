@@ -3,7 +3,7 @@ package ru.job4j.array;
 import org.junit.Test;
 import org.junit.Assert;
 
-public class SwitchArrayTeat {
+public class SwitchArrayTest {
     @Test
     public void whenSwap0to3() {
         int[] input = {1, 2, 3, 4};
