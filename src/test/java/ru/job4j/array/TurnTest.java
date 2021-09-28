@@ -19,20 +19,4 @@ public class TurnTest {
         int[] expected = new int[]{5, 2, 6, 1, 4};
         Assert.assertArrayEquals(expected, result);
     }
-
-    @Test
-    public void whenTurnArrayWithEvenAmountOfElementsThenTurnedArrayByBackTwo() {
-        int[] input = new int[]{4, 1, 6, 2};
-        int[] result = Turn.backNumberTwo(input);
-        int[] expected = new int[]{2, 6, 1, 4};
-        Assert.assertArrayEquals(expected, result);
-    }
-
-    @Test
-    public void whenTurnArrayWithOddAmountOfElementsThenTurnedArrayByBackTwo() {
-        int[] input = new int[]{4, 1, 6, 2, 5};
-        int[] result = Turn.backNumberTwo(input);
-        int[] expected = new int[]{5, 2, 6, 1, 4};
-        Assert.assertArrayEquals(expected, result);
-    }
 }
