@@ -3,17 +3,17 @@ package ru.job4j.array;
 public class Defragment {
     public static String[] compress(String[] array) {
         int shift = 1;
-        for (int indexNull = 0; indexNull < array.length; indexNull++) {
-            if (array[indexNull] == null) {
-                int pointNull = indexNull + shift;
-                for (int indexNotNull = pointNull; indexNotNull < array.length; indexNotNull++) {
-                    if (array[indexNotNull] != null) {
-                        array = SwitchArray.swapStringArray(array, indexNull, indexNotNull);
-                        shift = indexNotNull - indexNull;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == null) {
+                int point = i + shift;
+                for (int j = point; j < array.length; j++) {
+                    if (array[j] != null) {
+                        array = SwitchArray.swapStringArray(array, i, j);
+                        shift = j - i;
                         break;
                     }
-                    if (indexNotNull + 1 == array.length) {
-                        indexNull = indexNotNull;
+                    if (j + 1 == array.length) {
+                        i = j;
                     }
                 }
             }
